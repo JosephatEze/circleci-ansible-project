@@ -6,10 +6,9 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - checkout
-      commands: 
-          - run: echo "build project"
-          - run: npm install
-          - run: npm run build
+      - run: echo "build project"
+      - run: npm install
+      - run: npm run build
   test:
     docker:
       - image: circleci/node:13.8.0
