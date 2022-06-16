@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout
       - run: echo "build project"
-      - npm install
+      - npm i
       - npm run build
   test:
     docker:
@@ -15,7 +15,7 @@ jobs:
     steps:
       - checkout
       - run: echo "Running tests"
-      - npm install
+      - npm i
       - npm test
   analyze:
     docker:
