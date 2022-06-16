@@ -28,10 +28,10 @@ jobs:
 workflows:
   my_workflow:
     jobs:
-      - build
-      - test:
-          requires:
-            - build
-      - analyze:
+      - test
+      - build:
           requires:
             - test
+      - analyze:
+          requires:
+            - build
